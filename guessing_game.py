@@ -32,11 +32,10 @@ def start_game():
       
       
       print (secretNumber)
-      # while guessedNumber != secretNumber:
+      
       if guessedNumber > secretNumber:
          attempts +=1
          print ("It's lower. Try again!")
-         #guessedNumber = int(input("Please, guess another number: "))
          continue
               
       elif guessedNumber < secretNumber: 
@@ -53,11 +52,12 @@ def start_game():
             print (f"MEAN: {str(statistics.mean(attemptNumber))}" )
             print(f"MEDIAN: {str(statistics.median(attemptNumber))}" )
             print(f"MODE: {str(statistics.mode(attemptNumber))}" )
-
             restart = input("Would like to play again? [Y/N] ? ")
+           
             if restart != "N":
               secretNumber =  random.randrange(0, 100)
               attempts = 1
+              
               continue
         
             else:
